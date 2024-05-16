@@ -2,6 +2,7 @@ import bpy
 import os
 import cv2
 import numpy as np
+import sys
 
 def log(message):
     log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.log"
@@ -47,7 +48,11 @@ def main():
     image_path = os.path.join(current_blend_dir, 'normals.png')
     output_path = os.path.join(current_blend_dir, 'painted.png')
     mask_path = os.path.join(current_blend_dir, 'masked.png')
-    final_path = os.path.join(current_blend_dir, 'final.png')
+    seed_index = sys.argv.index("--") + 1 if "--" in sys.argv else -1
+    seed = sys.argv[seed_index] if seed_index != -1 and seed_index < len(sys.argv) else 'default_seed'
+
+    # Use the seed in your file paths
+    final_path = os.path.join(current_blend_dir, f'final_{seed}.png')
 
     # Open the Blender file
     bpy.ops.wm.open_mainfile(filepath=blender_file_path)
@@ -72,9 +77,11 @@ def main():
         return
 
     # Set resolution
-    bpy.context.scene.render.resolution_x = 2048
-    bpy.context.scene.render.resolution_y = 2048
+    bpy.context.scene.render.resolution_x = 1024
+    bpy.context.scene.render.resolution_y = 1024
     bpy.context.scene.render.resolution_percentage = 100
+    # sameple count 
+    bpy.context.scene.cycles.samples = 10
 
     # Set output path
     bpy.context.scene.render.filepath = output_path
@@ -99,11 +106,12 @@ def main():
     # Apply color correction
     hue_threshold = 100
     sat_threshold = 100
-    value_threshold = 100
+    value_threshold = 0.5
     result_image = correct_colors(original_image, modified_image, hue_threshold, sat_threshold, value_threshold)
     cv2.imwrite(final_path, result_image)
     log("Color correction applied!")
 
 if __name__ == "__main__":
+    log(f"Command-line arguments received: {sys.argv}")
     log("Running as main script.")
     main()

@@ -1,35 +1,17 @@
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
+Unregistering add-on...
+Add-on unregistered successfully.
+Registering add-on...
+Add-on registered successfully.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 85545
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 85545
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '85545']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
@@ -39,9 +21,33 @@ Rendering painted normals...
 Painted normal map generated!
 Mask created.
 Clipping mask applied successfully.
-Correcting colors...
+Correcting colors IN AUTO PAINTER...
 Color correction completed.
 Color correction applied!
+Unregistering add-on...
+Add-on unregistered successfully.
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_85545.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Done.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 85545
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 85545
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '85545']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
@@ -51,9 +57,31 @@ Rendering painted normals...
 Painted normal map generated!
 Mask created.
 Clipping mask applied successfully.
-Correcting colors...
+Correcting colors IN AUTO PAINTER...
 Color correction completed.
 Color correction applied!
+Unregistering add-on...
+Add-on unregistered successfully.
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_85545.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Done.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 85545
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 85545
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '85545']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
@@ -63,9 +91,45 @@ Rendering painted normals...
 Painted normal map generated!
 Mask created.
 Clipping mask applied successfully.
-Correcting colors...
+Correcting colors IN AUTO PAINTER...
 Color correction completed.
 Color correction applied!
+Unregistering add-on...
+Add-on unregistered successfully.
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_85545.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Done.
+Unregistering add-on...
+Add-on unregistered successfully.
+Registering add-on...
+Add-on registered successfully.
+Unregistering add-on...
+Add-on unregistered successfully.
+Registering add-on...
+Add-on registered successfully.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 46410
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 46410
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '46410']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
@@ -75,9 +139,31 @@ Rendering painted normals...
 Painted normal map generated!
 Mask created.
 Clipping mask applied successfully.
-Correcting colors...
+Correcting colors IN AUTO PAINTER...
 Color correction completed.
 Color correction applied!
+Unregistering add-on...
+Add-on unregistered successfully.
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_46410.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Done.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 46410
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 46410
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '46410']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
@@ -87,146 +173,34 @@ Rendering painted normals...
 Painted normal map generated!
 Mask created.
 Clipping mask applied successfully.
-Correcting colors...
+Correcting colors IN AUTO PAINTER...
 Color correction completed.
 Color correction applied!
+Unregistering add-on...
+Add-on unregistered successfully.
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_46410.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Done.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 46410
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 46410
+Registering add-on...
+Add-on registered successfully.
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', '46410']
 Running as main script.
 Starting main function...
 Found packed image: normals.png
 Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
 Image replaced and repacked successfully.
 Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors...
-Color correction completed.
-Color correction applied!
-Running as main script.
-Starting main function...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Correcting colors DEAR GOD HELP ME...
-Color correction completed.
-Color correction applied!
