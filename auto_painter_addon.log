@@ -1,0 +1,138 @@
+Registering add-on...
+Add-on registered successfully.
+Executing auto painter...
+Starting auto_paint...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py
+Registering add-on...
+Add-on registered successfully.
+Unregistering add-on...
+Add-on unregistered successfully.
+Blender background process completed successfully.
+stdout: Blender 3.6.5 (hash cf1e1ed46b7e built 2023-10-18 23:49:48)
+Read prefs: "/Users/barrett/Library/Application Support/Blender/3.6/config/userpref.blend"
+Device with name Apple M1 Max supports metal minimum requirements
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+METAL API - DETECTED GPU: Apple M1 Max
+Fra:64 Mem:517.08M (Peak 907.74M) | Time:00:00.85 | Syncing Camera
+Fra:64 Mem:517.10M (Peak 907.74M) | Time:00:00.85 | Syncing Paint Filter
+Fra:64 Mem:1295.82M (Peak 1297.98M) | Time:00:01.69 | Rendering 1 / 50 samples
+Fra:64 Mem:823.10M (Peak 1297.98M) | Time:00:02.00 | Rendering 26 / 50 samples
+Fra:64 Mem:823.10M (Peak 1297.98M) | Time:00:02.15 | Rendering 50 / 50 samples
+Fra:64 Mem:822.31M (Peak 1297.98M) | Time:00:02.16 | Compositing
+Fra:64 Mem:822.31M (Peak 1297.98M) | Time:00:02.16 | Compositing | Determining resolution
+Fra:64 Mem:822.31M (Peak 1297.98M) | Time:00:02.16 | Compositing | Initializing execution
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 4-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 7-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 5-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 4-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 8-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 4-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 9-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 10-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 4-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 12-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 6-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 13-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 14-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 11-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 15-16
+Fra:64 Mem:974.38M (Peak 1297.98M) | Time:00:03.04 | Compositing | Tile 16-16
+Fra:64 Mem:974.32M (Peak 1297.98M) | Time:00:03.04 | Compositing | De-initializing execution
+Saved: '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painted.png'
+ Time: 00:03.20 (Saving: 00:00.16)
+
+Error: Python: Traceback (most recent call last):
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 109, in <module>
+    main()
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 95, in main
+    modified_image[mask] = [0, 0, 0]
+IndexError: boolean index did not match indexed array along dimension 0; dimension is 1024 but corresponding boolean dimension is 2048
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ Starting the Poliigon Addon for Blender... 
+
+/Users/barrett/Poliigon/Blender/Poliigon_Blender_Settings.ini
+Toggle verbose logging in addon prefrences
+--------------------------------------------------
+f_GetSettings
+--------------------------------------------------
+f_SaveSettings
+--------------------------------------------------
+f_GetCredits
+--------------------------------------------------
+f_APIGetCredits
+--------------------------------------------------
+f_GetUserInfo
+--------------------------------------------------
+f_APIGetUserInfo
+--------------------------------------------------
+f_GetSubscriptionDetails
+--------------------------------------------------
+f_APIGetSubscriptionDetails
+--------------------------------------------------
+f_GetAssets
+f_GetAssets my_assets None 5000 1
+--------------------------------------------------
+f_GetPageAssets
+f_GetPageAssets poliigon/All Assets
+f_GetAssets my_assets/All Assets
+--------------------------------------------------
+f_APIGetAssets
+f_APIGetAssets 1 5000 my_assets/All Assets 1 1715845591.908308
+f_APIGetAssets {"query": "", "page": 1, "perPage": 5000, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+f_GetAssets None None None 0
+f_GetAssets poliigon/All Assets
+f_APIGetAssets 1 10 poliigon/All Assets 0 1715845591.908478
+f_APIGetAssets {"query": "", "page": 1, "perPage": 10, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+--------------------------------------------------
+f_GetCategories
+--------------------------------------------------
+f_APIGetCategories
+--------------------------------------------------
+f_GetLocalAssets
+--------------------------------------------------
+f_GetLocalAssetsThread
+REGISTERING CRENGINE
+Creating first entry
+__DEBUG__ is: True
+__DEBUG__ is: True
+--------------------------------------------------
+f_GetSceneAssets
+Creating first entry
+Creating first entry
+f_APIGetCategories Textures
+f_APIGetCategories Models
+f_APIGetCategories HDRIs
+--------------------------------------------------
+f_CheckAssets
+f_APIGetAssets 10 assets (3833 total)
+f_APIGetAssets 10 384 pages
+f_APIGetAssets 62 assets (62 total)
+f_APIGetAssets 62 7 pages
+Creating first entry
+
+Blender quit
+
+stderr: Traceback (most recent call last):
+  File "/Users/barrett/Library/Application Support/Blender/3.6/scripts/addons/crowdrender/cr_source/bl_addon/crender_engine.py", line 1138, in before_render
+    if not bpy.context.window_manager.cr.render_job_id:
+AttributeError: 'WindowManager' object has no attribute 'cr'
+Traceback (most recent call last):
+  File "/Users/barrett/Library/Application Support/Blender/3.6/scripts/addons/crowdrender/cr_source/bl_addon/crender_engine.py", line 1173, in after_render
+    print(f"CLEARED temp directories for render job {bpy.context.window_manager.cr.render_job_id}")
+AttributeError: 'WindowManager' object has no attribute 'cr'
+
+Auto painter finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final.png
+Apply final texture cancelled.
+Unregistering add-on...
+Add-on unregistered successfully.
