@@ -240,7 +240,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
             links.new(normal_map_node.outputs['Normal'], principled_bsdf.inputs['Normal'])
 
             log("Final image texture applied to the normal input of the selected object's material.")
-            self.report({'INFO'}, f"Final image texture applied to the normal input of the selected object's material.")
+            self.report({'INFO'}, f"Final image texture applied {random_seed}.")
             return {'FINISHED'}
 
 class OBJECT_PT_auto_painter_panel(bpy.types.Panel):

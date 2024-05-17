@@ -1,3 +1,4 @@
+import colorsys
 import bpy
 import os
 import cv2
@@ -9,37 +10,50 @@ def log(message):
     with open(log_file, "a") as f:
         f.write(message + "\n")
 
-def correct_colors(original_img, modified_img, hue_threshold, sat_threshold, value_threshold):
-    log("Correcting colors IN AUTO PAINTER...")
-    hsv_original = cv2.cvtColor(original_img, cv2.COLOR_BGR2HSV)
-    hsv_modified = cv2.cvtColor(modified_img, cv2.COLOR_BGR2HSV)
+def correct_colors_advanced(original_img, modified_img):
+    # Convert images to HSV and ensure floating point precision
+    hsv_original = cv2.cvtColor(original_img, cv2.COLOR_BGR2HSV).astype(np.float32)
+    hsv_modified = cv2.cvtColor(modified_img, cv2.COLOR_BGR2HSV).astype(np.float32)
 
-    for channel in range(3):
-        original_channel = hsv_original[:, :, channel]
-        modified_channel = hsv_modified[:, :, channel]
+    # Normalizing HSV values to range [0, 1] for calculations
+    hsv_original /= [180, 255, 255]
+    hsv_modified /= [180, 255, 255]
 
-        if channel == 0:
-            channel_diff = modified_channel.astype(int) - original_channel.astype(int)
-            channel_percentage_diff = channel_diff / 180.0
-        else:
-            channel_diff = modified_channel.astype(int) - original_channel.astype(int)
-            channel_percentage_diff = channel_diff / 255.0 
+    # Define the thresholds for hue, saturation, and value differences
+    hue_threshold = 0.01  # 1%
+    sat_threshold = 0.05  # 5%
+    val_threshold = 0.05  # 5%
 
-        mask_over = channel_percentage_diff > min(hue_threshold, sat_threshold, value_threshold)
-        mask_under = channel_percentage_diff < -max(hue_threshold, sat_threshold, value_threshold)
+    # Correction logic
+    for i in range(hsv_original.shape[0]):
+        for j in range(hsv_original.shape[1]):
+            # Calculate the hue difference correctly, considering circular nature
+            h_diff = (hsv_modified[i, j, 0] - hsv_original[i, j, 0]) % 1
+            if h_diff > 0.5:
+                h_diff -= 1  # Correct for circular hue values
+            h_diff = abs(h_diff)  # Get absolute difference
 
-        if channel == 0:
-            modified_channel[mask_over] = (original_channel[mask_over] + hue_threshold * 180).astype(original_channel.dtype) % 180
-            modified_channel[mask_under] = (original_channel[mask_under] - hue_threshold * 180).astype(original_channel.dtype) % 180
-        else:
-            modified_channel[mask_over] = (original_channel[mask_over] + sat_threshold * 255).astype(original_channel.dtype)
-            modified_channel[mask_under] = (original_channel[mask_under] - value_threshold * 255).astype(original_channel.dtype)
-            modified_channel = np.clip(modified_channel, 0, 255)
-        hsv_modified[:, :, channel] = modified_channel
+            # Differences for saturation and value
+            s_diff = abs(hsv_modified[i, j, 1] - hsv_original[i, j, 1])
+            v_diff = abs(hsv_modified[i, j, 2] - hsv_original[i, j, 2])
 
-    result_img = cv2.cvtColor(hsv_modified, cv2.COLOR_HSV2BGR)
-    log("Color correction completed.")
-    return result_img
+            # Apply correction if differences exceed the thresholds
+            corrected_hsv = hsv_modified[i, j].copy()  # Start with the current modified values
+            if h_diff > hue_threshold:
+                corrected_hsv[0] = (hsv_original[i, j, 0] + np.sign(hsv_modified[i, j, 0] - hsv_original[i, j, 0]) * hue_threshold) % 1
+            if s_diff > sat_threshold:
+                corrected_hsv[1] = hsv_original[i, j, 1] + np.sign(hsv_modified[i, j, 1] - hsv_original[i, j, 1]) * sat_threshold
+            if v_diff > val_threshold:
+                corrected_hsv[2] = hsv_original[i, j, 2] + np.sign(hsv_modified[i, j, 2] - hsv_original[i, j, 2]) * val_threshold
+                # Clip the value to the range [0, 1]
+                corrected_hsv[2] = np.clip(corrected_hsv[2], 0, 1)
+
+            # Assign corrected values (convert back to original scale if necessary)
+            hsv_modified[i, j] = corrected_hsv * [180, 255, 255]
+
+    # Convert corrected HSV back to BGR and to uint8
+    corrected_img_bgr = cv2.cvtColor(hsv_modified.astype(np.uint8), cv2.COLOR_HSV2BGR)
+    return corrected_img_bgr
 
 def main():
     log("Starting main function...")
@@ -48,6 +62,8 @@ def main():
     image_path = os.path.join(current_blend_dir, 'normals.png')
     output_path = os.path.join(current_blend_dir, 'painted.png')
     mask_path = os.path.join(current_blend_dir, 'masked.png')
+
+    # Parse command-line arguments for seed and desired percentage
     seed_index = sys.argv.index("--") + 1 if "--" in sys.argv else -1
     seed = sys.argv[seed_index] if seed_index != -1 and seed_index < len(sys.argv) else 'default_seed'
 
@@ -80,7 +96,7 @@ def main():
     bpy.context.scene.render.resolution_x = 1024
     bpy.context.scene.render.resolution_y = 1024
     bpy.context.scene.render.resolution_percentage = 100
-    # sameple count 
+    # sample count 
     bpy.context.scene.cycles.samples = 10
 
     # Set output path
@@ -103,11 +119,8 @@ def main():
     cv2.imwrite(mask_path, modified_image)
     log("Clipping mask applied successfully.")
 
-    # Apply color correction
-    hue_threshold = 100
-    sat_threshold = 100
-    value_threshold = 0.5
-    result_image = correct_colors(original_image, modified_image, hue_threshold, sat_threshold, value_threshold)
+    # Apply color correction with desired percentage
+    result_image = correct_colors_advanced(original_image, modified_image)
     cv2.imwrite(final_path, result_image)
     log("Color correction applied!")
 
