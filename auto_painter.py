@@ -20,9 +20,9 @@ def correct_colors_advanced(original_img, modified_img):
     hsv_modified /= [180, 255, 255]
 
     # Define the thresholds for hue, saturation, and value differences
-    hue_threshold = 0.01  # 1%
-    sat_threshold = 0.05  # 5%
-    val_threshold = 0.05  # 5%
+    hue_threshold = 0.02  # 1%
+    sat_threshold = 0.07  # 5%
+    val_threshold = 0.07  # 5%
 
     # Correction logic
     for i in range(hsv_original.shape[0]):
@@ -97,7 +97,7 @@ def main():
     bpy.context.scene.render.resolution_y = 1024
     bpy.context.scene.render.resolution_percentage = 100
     # sample count 
-    bpy.context.scene.cycles.samples = 10
+    bpy.context.scene.cycles.samples = 20
 
     # Set output path
     bpy.context.scene.render.filepath = output_path
