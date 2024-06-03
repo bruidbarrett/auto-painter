@@ -4,9 +4,10 @@ import os
 import cv2
 import numpy as np
 import sys
+import random
 
 def log(message):
-    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.log"
+    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/addon.log"
     with open(log_file, "a") as f:
         f.write(message + "\n")
 
@@ -62,10 +63,21 @@ def main():
     image_path = os.path.join(current_blend_dir, 'normals.png')
     output_path = os.path.join(current_blend_dir, 'painted.png')
     mask_path = os.path.join(current_blend_dir, 'masked.png')
+    grayscale_path = os.path.join(current_blend_dir, 'grayscale.png')
 
-    # Parse command-line arguments for seed and desired percentage
-    seed_index = sys.argv.index("--") + 1 if "--" in sys.argv else -1
-    seed = sys.argv[seed_index] if seed_index != -1 and seed_index < len(sys.argv) else 'default_seed'
+    # Parse command-line arguments for resolution, samples, and seed
+    args = sys.argv[sys.argv.index("--") + 1:]  # Get all args after "--"
+    
+    # Handle resolution
+    resolution_arg = int(args[args.index('render_resolution') + 1])
+   
+    # Handle samples
+    samples_arg = int(args[args.index('samples') + 1])
+    
+    # Handle seed
+    seed_index = args.index('seed') + 1 if 'seed' in args else -1
+    seed = args[seed_index] if seed_index != -1 and seed_index < len(args) else 'default_seed'
+    log(f"SEED IN AUTO_PAINTER.py: {seed}")
 
     # Use the seed in your file paths
     final_path = os.path.join(current_blend_dir, f'final_{seed}.png')
@@ -92,14 +104,13 @@ def main():
         log(f"Image named '{packed_image_name}' not found in the blend file.")
         return
 
-    # Set resolution
-    bpy.context.scene.render.resolution_x = 1024
-    bpy.context.scene.render.resolution_y = 1024
+    # set resolution and sample count
+    bpy.context.scene.render.resolution_x = resolution_arg
+    bpy.context.scene.render.resolution_y = resolution_arg
     bpy.context.scene.render.resolution_percentage = 100
-    # sample count 
-    bpy.context.scene.cycles.samples = 20
+    bpy.context.scene.cycles.samples = samples_arg
 
-    # Set output path
+    # set output path
     bpy.context.scene.render.filepath = output_path
     bpy.context.scene.render.image_settings.file_format = 'PNG'
 
@@ -123,6 +134,51 @@ def main():
     result_image = correct_colors_advanced(original_image, modified_image)
     cv2.imwrite(final_path, result_image)
     log("Color correction applied!")
+
+
+
+
+
+    # Convert the image from BGR to RGB for easier handling of colors
+    # masked_normal_map = cv2.imread(mask_path)   
+    # normal_map_rgb = cv2.cvtColor(masked_normal_map, cv2.COLOR_BGR2RGB)
+    # unique_colors = np.unique(normal_map_rgb.reshape(-1, normal_map_rgb.shape[2]), axis=0)
+
+    # # Iterate through each unique color
+    # for color in unique_colors:
+    #     if not np.all(color == [0, 0, 0]):  # skipping black
+    #         color_mask = np.all(normal_map_rgb == color, axis=-1) # Create a mask for the current color
+    #         value_adjustment = random.uniform(0.5, 1.5)  # Random value factor adjustment between 0.5 and 1.5
+
+    #         # Apply this adjustment to the corresponding areas in the normal map
+    #         for i in range(3):  # There are 3 channels in RGB
+    #             normal_map_rgb[:, :, i][color_mask] = np.clip(normal_map_rgb[:, :, i][color_mask] * value_adjustment, 0, 255)
+
+    # # Convert back to BGR for saving
+    # adjusted_normal_map = cv2.cvtColor(normal_map_rgb, cv2.COLOR_RGB2BGR)
+    # adjusted_normal_map_path = os.path.join(current_blend_dir, 'adjusted_normal_map.png')
+    # try:
+    #     cv2.imwrite(adjusted_normal_map_path, adjusted_normal_map)
+    # except Exception as e:
+    #     log(f"Error saving adjusted colors: {e}")
+    #     return
+    
+    # log("Colors adjusted based on mask.")
+
+    # create a grayscale copy of the masked.png image
+    # grayscale_image = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
+    # cv2.imwrite(grayscale_path, grayscale_image)
+    # log("Grayscale mask with limited shades created.")
+
+    # # recolor the colors.png based on the grayscale mask
+    # color_image = cv2.imread('colors.png')
+    
+    
+
+    # # Save the adjusted colors image
+    # final_colors_path = os.path.join(current_blend_dir, f'final_colors_{seed}.png')
+    # cv2.imwrite(final_colors_path, adjusted_colors)
+    # log("Colors adjusted based on grayscale mask.")
 
 if __name__ == "__main__":
     log(f"Command-line arguments received: {sys.argv}")

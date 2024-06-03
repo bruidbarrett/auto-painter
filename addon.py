@@ -1,68 +1,70 @@
+import bpy
+import os
+import cv2
+import subprocess
+import numpy as np
+import random
+
 bl_info = {
     "name": "Auto Painter",
     "blender": (2, 90, 0),
     "category": "Object",
 }
 
-import bpy
-import os
-import subprocess
-import cv2
-import numpy as np
-import random
-
 random_seed = random.randint(0, 99999)
 
-
 def log(message):
-    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.log"
+    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/addon.log"
     with open(log_file, "a") as f:
         f.write(message + "\n")
 
-def bake_normal_map(obj, filepath):
-    log(f"Baking normal map of {obj.name} to {filepath}")
+# ------------------ HELPER FUNCTIONS ------------------
 
-    # Ensure the object has an active material
+def bake_map(obj, filepath, w, map_type='color'):
+    log(f"Baking {map_type} map of '{obj.name}'")
+
     if not obj.data.materials:
         mat = bpy.data.materials.new(name="Material")
         obj.data.materials.append(mat)
     else:
         mat = obj.active_material
 
-    # Create a new image to bake to
-    bake_image = bpy.data.images.new(name="Bake_Image", width=1024, height=1024, float_buffer=False)
+    bake_image = bpy.data.images.new(name="Bake_Image", width=w, height=w, float_buffer=False)
     bake_image.filepath_raw = filepath
     bake_image.file_format = 'PNG'
 
-    # Add an image texture node to the material
     if not mat.use_nodes:
         mat.use_nodes = True
     nodes = mat.node_tree.nodes
-    links = mat.node_tree.links
+    # links = mat.node_tree.links
 
     tex_image_node = nodes.new(type='ShaderNodeTexImage')
     tex_image_node.image = bake_image
     tex_image_node.select = True
-    mat.node_tree.nodes.active = tex_image_node
+    nodes.active = tex_image_node
 
-    # Set bake settings
-    bpy.context.scene.cycles.bake_type = 'NORMAL'
+    # Set bake type
+    if map_type == 'color':
+        bpy.context.scene.cycles.bake_type = 'DIFFUSE'
+        bpy.context.scene.render.bake.use_pass_direct = False
+        bpy.context.scene.render.bake.use_pass_indirect = False
+        bpy.context.scene.render.bake.use_pass_color = True
+    elif map_type == 'normal':
+        bpy.context.scene.cycles.bake_type = 'NORMAL'
+
     bpy.context.scene.render.bake.use_selected_to_active = False
     bpy.context.scene.render.bake.use_cage = False
     bpy.context.scene.render.bake.cage_extrusion = 0.0
     bpy.context.scene.render.bake.max_ray_distance = 0.0
-    bpy.context.scene.render.bake.normal_space = 'OBJECT'
     bpy.context.scene.render.bake.use_clear = True
 
-    # Bake to the image
-    bpy.ops.object.bake(type='NORMAL')
-
-    # Save the baked image
+    bpy.ops.object.bake(type=bpy.context.scene.cycles.bake_type)
     bake_image.save_render(filepath)
     bpy.data.images.remove(bake_image)
 
-    log(f"Normal map baked to {filepath}")
+    log(f"{map_type.capitalize()} map baked to {filepath}")
 
+# ------------------ MAIN FUNCTIONS ------------------
 class OBJECT_OT_auto_painter(bpy.types.Operator):
     bl_idname = "object.auto_painter"
     bl_label = "Auto Paint and Apply Texture"
@@ -71,43 +73,43 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
     def execute(self, context):
         log("Executing auto painter...")
 
-        # Bake normal map as normals.png
+        # set render size and samples count
+        render_size = 1024
+        samples_count = 100
+
+        # bake normal map as normals.png + color map as colors.png
         obj = bpy.context.active_object
         if obj and obj.type == 'MESH':
             normals_filepath = os.path.join(os.path.dirname(bpy.data.filepath), 'normals.png')
-            bake_normal_map(obj, normals_filepath)
+            bake_map(obj, normals_filepath, render_size, 'normal')
+            colors_filepath = os.path.join(os.path.dirname(bpy.data.filepath), 'colors.png')
+            bake_map(obj, colors_filepath, render_size, 'color')
         else:
             log("No active mesh object selected.")
             self.report({'ERROR'}, "No active mesh object selected.")
             return {'CANCELLED'}
+        
+        # run auto painter script
+        result = self.auto_paint(render_size, samples_count)
+        log("Auto paint finished successfully.")
+        
+        # apply texture to normal map
+        result = self.apply_texture_to_normal(context)
+        log("Apply final texture finished successfully.")
 
-        result = self.auto_paint(context)
-        if result == {'CANCELLED'}:
-            log("Auto painter cancelled.")
-        else:
-            log("Auto painter finished successfully.")
-            result = self.apply_texture_to_normal(context)
-            if result == {'CANCELLED'}:
-                log("Apply final texture cancelled.")
-            else:
-                log("Apply final texture finished successfully.")
-        log("Done.")
+        # appy color to color map
+
+
         return result
 
-    def auto_paint(self, context):
+    def auto_paint(self, render_size, samples_count):
             log("Starting auto_paint...")
 
             # Generate a random seed
             log(f"SEED GENERATED IN ADDON IS {random_seed}")
 
-            # Determine the directory of the currently opened Blender file
+            # determine the directory of the currently opened Blender file
             current_blend_dir = os.path.dirname(bpy.data.filepath)
-            log(f"Current blend directory: {current_blend_dir}")
-
-            if not current_blend_dir:
-                log("No .blend file is currently opened.")
-                self.report({'ERROR'}, "No .blend file is currently opened.")
-                return {'CANCELLED'}
 
             blender_executable = bpy.app.binary_path
             operation_script_path = os.path.join(current_blend_dir, 'auto_painter.py')
@@ -123,21 +125,20 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Operation script not found: {operation_script_path}")
                 return {'CANCELLED'}
 
-            # Construct the command to run Blender in background mode with the seed argument
+            # construct the command to run Blender in background mode with the seed argument
             command = [
                 blender_executable,
                 "-b", blender_file_path,
                 "-P", operation_script_path,
-                "--",  # This separates script arguments from blender's arguments
-                str(random_seed)  # Passing seed as an argument
+                "--",  # This separates Blender's arguments from script arguments
+                "render_resolution", str(render_size),
+                "samples", str(samples_count),
+                "seed", str(random_seed)  # Passing seed as an argument
             ]
 
-            log(f"Running command: {' '.join(command)}")
 
             # Run the command
             result = subprocess.run(command, capture_output=True, text=True)
-            log("Subprocess result:")
-            log(f"Return code: {result.returncode}")
             # log(f"stdout: {result.stdout}")
             # log(f"stderr: {result.stderr}")
 
@@ -146,7 +147,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Blender background process failed: {result.stderr}")
                 return {'CANCELLED'}
 
-            log("Blender background process completed successfully.")
+            log("Blender auto-painter background process completed successfully!")
 
             return {'FINISHED'}
 
@@ -243,6 +244,10 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
             self.report({'INFO'}, f"Final image texture applied {random_seed}.")
             return {'FINISHED'}
 
+
+
+# --------------------------------------------
+
 class OBJECT_PT_auto_painter_panel(bpy.types.Panel):
     bl_idname = "OBJECT_PT_auto_painter_panel"
     bl_label = "Auto Painter"
@@ -263,19 +268,15 @@ class OBJECT_PT_auto_painter_panel(bpy.types.Panel):
             layout.label(text="No object selected")
 
 def register():
-    log("Registering add-on...")
     bpy.utils.register_class(OBJECT_OT_auto_painter)
     bpy.utils.register_class(OBJECT_PT_auto_painter_panel)
-    log("Add-on registered successfully.")
 
 def unregister():
-    log("Unregistering add-on...")
     bpy.utils.unregister_class(OBJECT_OT_auto_painter)
     bpy.utils.unregister_class(OBJECT_PT_auto_painter_panel)
-    log("Add-on unregistered successfully.")
 
 if __name__ == "__main__":
     # clear log file 
-    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.log"
+    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/addon.log"
     open(log_file, 'w').close()
     register()

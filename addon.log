@@ -1,0 +1,721 @@
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto painter...
+SEED GENERATED: 74370
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Final texture applied successfully!
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting generate_painted_normals...
+SEED GENERATED IN ADDON IS 2059
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Operation script not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/generate_painted_normalser.py
+Starting apply_texture_to_normal...
+IS THIS EVER GETTING CALLED???!?!?!?!?!?!?!??!?!?!?!?!?!?
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_2059.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_2059.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Executing auto painter...
+Baking normal map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of Suzanne to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 1130
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- 1130
+Subprocess result:
+Return code: 0
+Blender background process completed successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_1130.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 41440
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- render_resolution 1024 samples 100 seed 41440
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_41440.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_41440.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 41440
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- render_resolution 1024 samples 100 seed 41440
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_41440.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_41440.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 33200
+Running command: /Applications/Blender.app/Contents/MacOS/Blender -b /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend -P /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py -- render_resolution 1024 samples 100 seed 33200
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '33200']
+Running as main script.
+Starting main function...
+GOD SAVE US ALL GOD SAVE US ALL GOD SAVE US ALL GOD SAVE US ALL
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_33200.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_33200.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 60529
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '60529']
+Running as main script.
+Starting main function...
+Subprocess result:
+Return code: 0
+stdout: Blender 3.6.5 (hash cf1e1ed46b7e built 2023-10-18 23:49:48)
+Read prefs: "/Users/barrett/Library/Application Support/Blender/3.6/config/userpref.blend"
+Device with name Apple M1 Max supports metal minimum requirements
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Error: Python: Traceback (most recent call last):
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 139, in <module>
+    main()
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 71, in main
+    resolution_x, resolution_y = map(int, resolution_arg.split('x'))
+ValueError: not enough values to unpack (expected 2, got 1)
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ Starting the Poliigon Addon for Blender... 
+
+/Users/barrett/Poliigon/Blender/Poliigon_Blender_Settings.ini
+Toggle verbose logging in addon prefrences
+--------------------------------------------------
+f_GetSettings
+--------------------------------------------------
+f_SaveSettings
+--------------------------------------------------
+f_GetCredits
+--------------------------------------------------
+f_APIGetCredits
+--------------------------------------------------
+f_GetUserInfo
+--------------------------------------------------
+f_APIGetUserInfo
+--------------------------------------------------
+f_GetSubscriptionDetails
+--------------------------------------------------
+f_APIGetSubscriptionDetails
+--------------------------------------------------
+f_GetAssets
+f_GetAssets my_assets None 5000 1
+--------------------------------------------------
+f_GetPageAssets
+f_GetPageAssets poliigon/All Assets
+f_GetAssets my_assets/All Assets
+--------------------------------------------------
+f_APIGetAssets
+f_APIGetAssets 1 5000 my_assets/All Assets 1 1717382509.243638
+f_APIGetAssets {"query": "", "page": 1, "perPage": 5000, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+f_GetAssets None None None 0
+f_GetAssets poliigon/All Assets
+f_APIGetAssets 1 10 poliigon/All Assets 0 1717382509.243718
+f_APIGetAssets {"query": "", "page": 1, "perPage": 10, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+--------------------------------------------------
+f_GetCategories
+--------------------------------------------------
+f_APIGetCategories
+--------------------------------------------------
+f_GetLocalAssets
+--------------------------------------------------
+f_GetLocalAssetsThread
+REGISTERING CRENGINE
+Creating first entry
+__DEBUG__ is: True
+__DEBUG__ is: True
+--------------------------------------------------
+f_GetSceneAssets
+Creating first entry
+Creating first entry
+f_APIGetCategories Textures
+f_APIGetCategories Models
+f_APIGetCategories HDRIs
+--------------------------------------------------
+f_CheckAssets
+f_APIGetAssets 10 assets (3859 total)
+f_APIGetAssets 10 386 pages
+f_APIGetAssets 72 assets (72 total)
+f_APIGetAssets 72 8 pages
+
+Blender quit
+
+stderr: 
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_60529.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_60529.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 32419
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '32419']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 32419
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Subprocess result:
+Return code: 0
+stdout: Blender 3.6.5 (hash cf1e1ed46b7e built 2023-10-18 23:49:48)
+Read prefs: "/Users/barrett/Library/Application Support/Blender/3.6/config/userpref.blend"
+Device with name Apple M1 Max supports metal minimum requirements
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+Error: Python: Traceback (most recent call last):
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 139, in <module>
+    main()
+  File "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py", line 106, in main
+    bpy.context.scene.render.resolution_x = resolution_arg
+TypeError: bpy_struct: item.attr = val: RenderSettings.resolution_x expected an int type, not str
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ Starting the Poliigon Addon for Blender... 
+
+/Users/barrett/Poliigon/Blender/Poliigon_Blender_Settings.ini
+Toggle verbose logging in addon prefrences
+--------------------------------------------------
+f_GetSettings
+--------------------------------------------------
+f_SaveSettings
+--------------------------------------------------
+f_GetCredits
+--------------------------------------------------
+f_APIGetCredits
+--------------------------------------------------
+f_GetUserInfo
+--------------------------------------------------
+f_APIGetUserInfo
+--------------------------------------------------
+f_GetSubscriptionDetails
+--------------------------------------------------
+f_APIGetSubscriptionDetails
+--------------------------------------------------
+f_GetAssets
+f_GetAssets my_assets None 5000 1
+--------------------------------------------------
+f_GetPageAssets
+f_GetPageAssets poliigon/All Assets
+f_GetAssets my_assets/All Assets
+--------------------------------------------------
+f_APIGetAssets
+f_APIGetAssets 1 5000 my_assets/All Assets 1 1717382706.2399511
+f_APIGetAssets {"query": "", "page": 1, "perPage": 5000, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+f_GetAssets None None None 0
+f_GetAssets poliigon/All Assets
+f_APIGetAssets 1 10 poliigon/All Assets 0 1717382706.2400372
+f_APIGetAssets {"query": "", "page": 1, "perPage": 10, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+--------------------------------------------------
+f_GetCategories
+--------------------------------------------------
+f_APIGetCategories
+--------------------------------------------------
+f_GetLocalAssets
+--------------------------------------------------
+f_GetLocalAssetsThread
+REGISTERING CRENGINE
+Creating first entry
+__DEBUG__ is: True
+__DEBUG__ is: True
+--------------------------------------------------
+f_GetSceneAssets
+Creating first entry
+Creating first entry
+f_APIGetCategories Textures
+f_APIGetCategories Models
+f_APIGetCategories HDRIs
+--------------------------------------------------
+f_CheckAssets
+f_APIGetAssets 10 assets (3859 total)
+f_APIGetAssets 10 386 pages
+f_APIGetAssets 72 assets (72 total)
+f_APIGetAssets 72 8 pages
+Creating first entry
+
+Blender quit
+
+stderr: 
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_32419.png
+Final image not found: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_32419.png
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 60730
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '60730']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 60730
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Subprocess result:
+Return code: 0
+stdout: Blender 3.6.5 (hash cf1e1ed46b7e built 2023-10-18 23:49:48)
+Read prefs: "/Users/barrett/Library/Application Support/Blender/3.6/config/userpref.blend"
+Device with name Apple M1 Max supports metal minimum requirements
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Read blend: "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend"
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+Error: Unable to pack file, source path '/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png' not found
+ERROR: Image "/Users/barrett/Tristan/Projects/Blender/Thesis/david/normals.png" not available. Keeping packed image
+METAL API - DETECTED GPU: Apple M1 Max
+Fra:64 Mem:725.91M (Peak 1313.53M) | Time:00:01.58 | Syncing Camera
+Fra:64 Mem:725.91M (Peak 1313.53M) | Time:00:01.58 | Syncing Paint Filter
+Fra:64 Mem:1873.79M (Peak 1886.43M) | Time:00:02.43 | Rendering 1 / 50 samples
+Fra:64 Mem:1048.93M (Peak 1886.43M) | Time:00:02.84 | Rendering 26 / 50 samples
+Fra:64 Mem:1048.93M (Peak 1886.43M) | Time:00:03.03 | Rendering 50 / 50 samples
+Fra:64 Mem:1048.14M (Peak 1886.43M) | Time:00:03.04 | Compositing
+Fra:64 Mem:1048.14M (Peak 1886.43M) | Time:00:03.04 | Compositing | Determining resolution
+Fra:64 Mem:1048.14M (Peak 1886.43M) | Time:00:03.04 | Compositing | Initializing execution
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 1-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 6-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 3-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 4-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 8-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 10-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 11-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 7-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 9-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 5-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 2-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 12-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 13-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 14-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 15-16
+Fra:64 Mem:1200.21M (Peak 1886.43M) | Time:00:03.93 | Compositing | Tile 16-16
+Fra:64 Mem:1200.15M (Peak 1886.43M) | Time:00:03.93 | Compositing | De-initializing execution
+Saved: '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painted.png'
+ Time: 00:04.10 (Saving: 00:00.16)
+
+::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+
+ Starting the Poliigon Addon for Blender... 
+
+/Users/barrett/Poliigon/Blender/Poliigon_Blender_Settings.ini
+Toggle verbose logging in addon prefrences
+--------------------------------------------------
+f_GetSettings
+--------------------------------------------------
+f_SaveSettings
+--------------------------------------------------
+f_GetCredits
+--------------------------------------------------
+f_APIGetCredits
+--------------------------------------------------
+f_GetUserInfo
+--------------------------------------------------
+f_APIGetUserInfo
+--------------------------------------------------
+f_GetSubscriptionDetails
+--------------------------------------------------
+f_APIGetSubscriptionDetails
+--------------------------------------------------
+f_GetAssets
+f_GetAssets my_assets None 5000 1
+--------------------------------------------------
+f_GetPageAssets
+f_GetPageAssets poliigon/All Assets
+f_GetAssets my_assets/All Assets
+--------------------------------------------------
+f_APIGetAssets
+f_APIGetAssets 1 5000 my_assets/All Assets 1 1717382808.234164
+f_APIGetAssets {"query": "", "page": 1, "perPage": 5000, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+f_GetAssets None None None 0
+f_GetAssets poliigon/All Assets
+f_APIGetAssets 1 10 poliigon/All Assets 0 1717382808.234263
+f_APIGetAssets {"query": "", "page": 1, "perPage": 10, "algoliaParams": {"facetFilters": [], "numericFilters": ["Credit>=0"]}}
+--------------------------------------------------
+f_GetCategories
+--------------------------------------------------
+f_APIGetCategories
+--------------------------------------------------
+f_GetLocalAssets
+--------------------------------------------------
+f_GetLocalAssetsThread
+REGISTERING CRENGINE
+Creating first entry
+__DEBUG__ is: True
+__DEBUG__ is: True
+--------------------------------------------------
+f_GetSceneAssets
+Creating first entry
+Creating first entry
+f_APIGetCategories Textures
+f_APIGetCategories Models
+f_APIGetCategories HDRIs
+--------------------------------------------------
+f_CheckAssets
+f_APIGetAssets 10 assets (3859 total)
+f_APIGetAssets 10 386 pages
+f_APIGetAssets 72 assets (72 total)
+f_APIGetAssets 72 8 pages
+Creating first entry
+
+Blender quit
+
+stderr: Traceback (most recent call last):
+  File "/Users/barrett/Library/Application Support/Blender/3.6/scripts/addons/crowdrender/cr_source/bl_addon/crender_engine.py", line 1138, in before_render
+    if not bpy.context.window_manager.cr.render_job_id:
+AttributeError: 'WindowManager' object has no attribute 'cr'
+Traceback (most recent call last):
+  File "/Users/barrett/Library/Application Support/Blender/3.6/scripts/addons/crowdrender/cr_source/bl_addon/crender_engine.py", line 1173, in after_render
+    print(f"CLEARED temp directories for render job {bpy.context.window_manager.cr.render_job_id}")
+AttributeError: 'WindowManager' object has no attribute 'cr'
+
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_60730.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 87597
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '87597']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 87597
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Grayscale mask with limited shades created.
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_87597.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 29042
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '29042']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 29042
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Grayscale mask with limited shades created.
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_29042.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 17737
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '17737']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 17737
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Grayscale mask with limited shades created.
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_17737.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 53033
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '53033']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 53033
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_53033.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 43510
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '43510']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 43510
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Error converting to HSV: OpenCV(4.9.0) :-1: error: (-5:Bad argument) in function 'cvtColor'
+> Overload resolution failed:
+>  - src is not a numpy array, neither a scalar
+>  - Expected Ptr<cv::UMat> for argument 'src'
+
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_43510.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 69422
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '69422']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 69422
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Colors adjusted based on mask.
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_69422.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 80260
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '80260']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 80260
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 9639
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '9639']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 9639
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 96378
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '96378']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 96378
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_96378.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 96378
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '96378']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 96378
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_96378.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 96378
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '1024', 'samples', '100', 'seed', '96378']
+Running as main script.
+Starting main function...
+SEED IN AUTO_PAINTER.py: 96378
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_96378.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
