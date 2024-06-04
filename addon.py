@@ -74,7 +74,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
         log("Executing auto painter...")
 
         # set render size and samples count
-        render_size = 1024
+        render_size = 2048
         samples_count = 100
 
         # bake normal map as normals.png + color map as colors.png

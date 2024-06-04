@@ -21,9 +21,9 @@ def correct_colors_advanced(original_img, modified_img):
     hsv_modified /= [180, 255, 255]
 
     # Define the thresholds for hue, saturation, and value differences
-    hue_threshold = 0.02  # 1%
-    sat_threshold = 0.07  # 5%
-    val_threshold = 0.07  # 5%
+    hue_threshold = 0.04
+    sat_threshold = 0.12
+    val_threshold = 0.12 
 
     # Correction logic
     for i in range(hsv_original.shape[0]):
@@ -56,28 +56,13 @@ def correct_colors_advanced(original_img, modified_img):
     corrected_img_bgr = cv2.cvtColor(hsv_modified.astype(np.uint8), cv2.COLOR_HSV2BGR)
     return corrected_img_bgr
 
-def main():
-    log("Starting main function...")
+def paint_normal_map(resolution_arg, samples_arg, seed):
+    log("Starting NORMAL MAP painting...")
     current_blend_dir = os.path.dirname(bpy.data.filepath)
     blender_file_path = os.path.join(current_blend_dir, 'painter.blend')
     image_path = os.path.join(current_blend_dir, 'normals.png')
     output_path = os.path.join(current_blend_dir, 'painted.png')
     mask_path = os.path.join(current_blend_dir, 'masked.png')
-    grayscale_path = os.path.join(current_blend_dir, 'grayscale.png')
-
-    # Parse command-line arguments for resolution, samples, and seed
-    args = sys.argv[sys.argv.index("--") + 1:]  # Get all args after "--"
-    
-    # Handle resolution
-    resolution_arg = int(args[args.index('render_resolution') + 1])
-   
-    # Handle samples
-    samples_arg = int(args[args.index('samples') + 1])
-    
-    # Handle seed
-    seed_index = args.index('seed') + 1 if 'seed' in args else -1
-    seed = args[seed_index] if seed_index != -1 and seed_index < len(args) else 'default_seed'
-    log(f"SEED IN AUTO_PAINTER.py: {seed}")
 
     # Use the seed in your file paths
     final_path = os.path.join(current_blend_dir, f'final_{seed}.png')
@@ -135,52 +120,109 @@ def main():
     cv2.imwrite(final_path, result_image)
     log("Color correction applied!")
 
+def paint_color_map(resolution_arg, samples_arg, seed):
+    log("Starting COLOR MAP painting...")
+    current_blend_dir = os.path.dirname(bpy.data.filepath)
+    blender_file_path = os.path.join(current_blend_dir, 'color_painter.blend')
+    image_path = os.path.join(current_blend_dir, 'colors.png')
+    final_path = os.path.join(current_blend_dir, f'final_colors_{seed}.png')
 
 
+    # Convert black pixels to transparent
+    image = cv2.imread(image_path, cv2.IMREAD_UNCHANGED)
 
+    # Check if image has an alpha channel, if not, add one
+    if image.shape[2] == 3:
+        image = cv2.cvtColor(image, cv2.COLOR_RGB2RGBA)
 
-    # Convert the image from BGR to RGB for easier handling of colors
-    # masked_normal_map = cv2.imread(mask_path)   
-    # normal_map_rgb = cv2.cvtColor(masked_normal_map, cv2.COLOR_BGR2RGB)
-    # unique_colors = np.unique(normal_map_rgb.reshape(-1, normal_map_rgb.shape[2]), axis=0)
+    # Set black pixels to transparent
+    image[np.all(image[:, :, :3] == [0, 0, 0], axis=-1)] = [0, 0, 0, 0]
+    cv2.imwrite(image_path, image)
 
-    # # Iterate through each unique color
-    # for color in unique_colors:
-    #     if not np.all(color == [0, 0, 0]):  # skipping black
-    #         color_mask = np.all(normal_map_rgb == color, axis=-1) # Create a mask for the current color
-    #         value_adjustment = random.uniform(0.5, 1.5)  # Random value factor adjustment between 0.5 and 1.5
-
-    #         # Apply this adjustment to the corresponding areas in the normal map
-    #         for i in range(3):  # There are 3 channels in RGB
-    #             normal_map_rgb[:, :, i][color_mask] = np.clip(normal_map_rgb[:, :, i][color_mask] * value_adjustment, 0, 255)
-
-    # # Convert back to BGR for saving
-    # adjusted_normal_map = cv2.cvtColor(normal_map_rgb, cv2.COLOR_RGB2BGR)
-    # adjusted_normal_map_path = os.path.join(current_blend_dir, 'adjusted_normal_map.png')
-    # try:
-    #     cv2.imwrite(adjusted_normal_map_path, adjusted_normal_map)
-    # except Exception as e:
-    #     log(f"Error saving adjusted colors: {e}")
-    #     return
+    # Open the Blender file
+    bpy.ops.wm.open_mainfile(filepath=blender_file_path)
     
-    # log("Colors adjusted based on mask.")
+    # Replace the packed image data with the new image
+    packed_image_name = 'colors.png'
+    image_found = False
+    for image in bpy.data.images:
+        if image.name == packed_image_name:
+            log(f"Found packed image: {image.name}")
+            image.filepath = image_path
+            log(f"Setting image filepath to: {image.filepath}")
+            image.source = 'FILE'
+            image.reload()
+            image.pack()
+            image_found = True
+            log("Image replaced and repacked successfully.")
+            break
 
-    # create a grayscale copy of the masked.png image
-    # grayscale_image = cv2.imread(mask_path, cv2.IMREAD_GRAYSCALE)
-    # cv2.imwrite(grayscale_path, grayscale_image)
-    # log("Grayscale mask with limited shades created.")
+    if not image_found:
+        log(f"Image named '{packed_image_name}' not found in the blend file.")
+        return
 
-    # # recolor the colors.png based on the grayscale mask
-    # color_image = cv2.imread('colors.png')
+    # set resolution and sample count
+    bpy.context.scene.render.resolution_x = resolution_arg
+    bpy.context.scene.render.resolution_y = resolution_arg
+    bpy.context.scene.render.resolution_percentage = 100
+    bpy.context.scene.cycles.samples = samples_arg
+
+    # set output path
+    bpy.context.scene.render.filepath = final_path
+    bpy.context.scene.render.image_settings.file_format = 'PNG'
+
+    # Render painted colors
+    log("Rendering painted color map...")
+    bpy.ops.render.render(write_still=True)
+    log("Painted color map generated!")
+
+        # Load the final rendered image
+    final_image = cv2.imread(final_path, cv2.IMREAD_UNCHANGED)
     
-    
+    # Check if the image has an alpha channel
+    if final_image.shape[2] == 4:
+        # Split alpha channel if present
+        color_channels, alpha_channel = final_image[..., :3], final_image[..., 3]
+    else:
+        color_channels = final_image
 
-    # # Save the adjusted colors image
-    # final_colors_path = os.path.join(current_blend_dir, f'final_colors_{seed}.png')
-    # cv2.imwrite(final_colors_path, adjusted_colors)
-    # log("Colors adjusted based on grayscale mask.")
+    # Convert to HSV
+    hsv_image = cv2.cvtColor(color_channels, cv2.COLOR_RGB2HSV)
+
+    # Adjust the hue by -5 (ensure no negative values)
+    hsv_image[:, :, 0] = (hsv_image[:, :, 0].astype(int) + 2.5) % 180
+
+    # Convert back to RGB
+    adjusted_rgb = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB)
+
+    if final_image.shape[2] == 4:
+        # Combine with alpha channel if it was present
+        adjusted_rgb = np.dstack((adjusted_rgb, alpha_channel))
+
+    # Save the adjusted image
+    adjusted_image_path = os.path.join(current_blend_dir, f'adjusted_final_colors_{seed}.png')
+    cv2.imwrite(adjusted_image_path, adjusted_rgb)
+
+    log("Hue adjusted and final image saved!")
+
+
+
+def main():
+    log("Starting main function...")
+
+    # parse cli arguments (resolution, samples, and seed)
+    log(f"Command-line arguments received: {sys.argv}")
+    args = sys.argv[sys.argv.index("--") + 1:]  # Get all args after "--"
+    resolution_arg = int(args[args.index('render_resolution') + 1])
+    samples_arg = int(args[args.index('samples') + 1])
+    seed = args[args.index('seed') + 1]
+    log(f"SEED IN AUTO_PAINTER.py: {seed}")
+
+    # auto paint normal map
+    paint_normal_map(resolution_arg, samples_arg, seed)
+
+    # auto paint color map
+    paint_color_map(resolution_arg, samples_arg, seed)
 
 if __name__ == "__main__":
-    log(f"Command-line arguments received: {sys.argv}")
-    log("Running as main script.")
     main()

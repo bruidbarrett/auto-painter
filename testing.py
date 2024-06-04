@@ -11,11 +11,6 @@ def apply_soft_light_blend(masked_path, colors_path, output_path):
     # Convert grayscale image to 4 channels (RGBA) where R=G=B and A=255
     masked_img_rgba = cv2.cvtColor(masked_img, cv2.COLOR_GRAY2RGBA)
 
-    # Max out the contrast of the RGBA image
-    # Apply histogram equalization on the color channels
-    for i in range(3):  # Apply to R, G, B channels
-        masked_img_rgba[:, :, i] = cv2.equalizeHist(masked_img_rgba[:, :, i])
-
     masked_img_float = masked_img_rgba.astype(float)  # Convert to float for blending
 
     # Read the colors image
