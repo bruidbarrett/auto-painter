@@ -68,7 +68,7 @@ def main():
     path_to_generated_images = "/Users/barrett/Tristan/Projects/Blender/Thesis/Generated"
 
     real_edges, real_orientations = analyze_folder(path_to_real_images, 'Real', display=False)
-    generated_edges, generated_orientations = analyze_folder(path_to_generated_images, 'Generated', display=False)
+    generated_edges, generated_orientations = analyze_folder(path_to_generated_images, 'Generated', display=True)
 
     compare_edge_statistics(real_edges, generated_edges, real_orientations, generated_orientations)
 

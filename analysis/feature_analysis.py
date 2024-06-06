@@ -5,7 +5,7 @@ from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
 from scipy.spatial import ConvexHull
 
-def extract_features(image_path):
+def extract_features(image_path, display=False):
     """Extract features using color histograms for hue, saturation, and value channels."""
     image = cv2.imread(image_path)
     hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
@@ -17,15 +17,39 @@ def extract_features(image_path):
     hist_hue = cv2.normalize(hist_hue, hist_hue).flatten()
     hist_saturation = cv2.normalize(hist_saturation, hist_saturation).flatten()
     hist_value = cv2.normalize(hist_value, hist_value).flatten()
+    
+    if display:
+        plt.figure(figsize=(18, 4))
+        plt.subplot(141), plt.imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+        plt.title('Original Image')
+        plt.axis('off')  # Turn off axis numbers and ticks
+
+        plt.subplot(142)
+        plt.plot(hist_hue, color='r')
+        plt.fill_between(range(len(hist_hue)), hist_hue, color='red', alpha=0.3)
+        plt.title('Hue Histogram')
+
+        plt.subplot(143)
+        plt.plot(hist_saturation, color='g')
+        plt.fill_between(range(len(hist_saturation)), hist_saturation, color='green', alpha=0.3)
+        plt.title('Saturation Histogram')
+
+        plt.subplot(144)
+        plt.plot(hist_value, color='b')
+        plt.fill_between(range(len(hist_value)), hist_value, color='blue', alpha=0.3)
+        plt.title('Value Histogram')
+
+        plt.show()
+
     return np.hstack((hist_hue, hist_saturation, hist_value))
 
-def process_folder(folder_path):
+def process_folder(folder_path, display=False):
     """Process all images in the folder and extract their features."""
     features = []
     files = [f for f in os.listdir(folder_path) if f.endswith('.png')]
     for file in files:
         file_path = os.path.join(folder_path, file)
-        features.append(extract_features(file_path))
+        features.append(extract_features(file_path, display))
     return features
 
 def plot_cluster_results(features_real, features_generated):
@@ -58,14 +82,11 @@ def plot_cluster_results(features_real, features_generated):
     plt.show()
 
 def main():
-    # path_to_real_images = input("Enter the path to the folder of real paintings: ")
     path_to_real_images = "/Users/barrett/Tristan/Projects/Blender/Thesis/Refrences"
-    
-    # path_to_generated_images = input("Enter the path to the folder of generated paintings: ")
     path_to_generated_images = "/Users/barrett/Tristan/Projects/Blender/Thesis/Generated"
 
-    features_real = process_folder(path_to_real_images)
-    features_generated = process_folder(path_to_generated_images)
+    features_real = process_folder(path_to_real_images, display=True)
+    features_generated = process_folder(path_to_generated_images, display=True)
 
     plot_cluster_results(features_real, features_generated)
 

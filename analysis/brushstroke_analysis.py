@@ -80,7 +80,7 @@ def main():
     path_to_generated_images = "/Users/barrett/Tristan/Projects/Blender/Thesis/Generated"
     
     print("\nAnalyzing real paintings...")
-    real_directions, real_lengths = analyze_folder(path_to_real_images, display=False)
+    real_directions, real_lengths = analyze_folder(path_to_real_images, display=True)
     
     print("\nAnalyzing generated paintings...")
     generated_directions, generated_lengths = analyze_folder(path_to_generated_images, display=True)
