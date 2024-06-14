@@ -74,7 +74,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
         log("Executing auto painter...")
 
         # set render size and samples count
-        render_size = 2048
+        render_size = 4096
         samples_count = 100
 
         # bake normal map as normals.png + color map as colors.png
@@ -98,7 +98,8 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
         log("Apply final texture finished successfully.")
 
         # appy color to color map
-
+        result = self.apply_color_map(context)
+        log("Apply color map finished successfully.")
 
         return result
 
@@ -242,6 +243,82 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
 
             log("Final image texture applied to the normal input of the selected object's material.")
             self.report({'INFO'}, f"Final image texture applied {random_seed}.")
+            return {'FINISHED'}
+
+    def apply_color_map(self, context):
+            log("Starting apply_color_map...")
+
+            # Determine the directory of the currently opened Blender file
+            current_blend_dir = os.path.dirname(bpy.data.filepath)
+            
+            final_image_filename = f'final_colors_{random_seed}.png'  # Use the seed in the file name
+            final_image_path = os.path.join(current_blend_dir, final_image_filename)
+
+            log(f"Current blend directory: {current_blend_dir}")
+            log(f"Final image path: {final_image_path}")
+
+            if not os.path.exists(final_image_path):
+                log(f"Final image not found: {final_image_path}")
+                self.report({'ERROR'}, f"Final image not found: {final_image_path}")
+                return {'CANCELLED'}
+
+            # Load the final.png image
+            try:
+                final_image = bpy.data.images.load(final_image_path, check_existing=False)
+                final_image.reload()
+            except Exception as e:
+                log(f"Failed to load {final_image_filename}: {e}")
+                self.report({'ERROR'}, f"Failed to load {final_image_filename}: {e}")
+                return {'CANCELLED'}
+
+            # Get the active object
+            obj = bpy.context.active_object
+
+            if obj is None:
+                log("No active object selected.")
+                self.report({'ERROR'}, "No active object selected.")
+                return {'CANCELLED'}
+
+            if obj.type != 'MESH':
+                log("Active object is not a mesh.")
+                self.report({'ERROR'}, "Active object is not a mesh.")
+                return {'CANCELLED'}
+
+            # Get the active material
+            mat = obj.active_material
+
+            if mat is None:
+                log("Active object has no material.")
+                self.report({'ERROR'}, "Active object has no material.")
+                return {'CANCELLED'}
+
+            # Use nodes
+            mat.use_nodes = True
+            nodes = mat.node_tree.nodes
+            links = mat.node_tree.links
+
+            # Create an Image Texture node
+            tex_image_node = nodes.new(type='ShaderNodeTexImage')
+            tex_image_node.image = final_image
+            tex_image_node.location = (0, 0)
+
+            # Find the Principled BSDF node
+            principled_bsdf = None
+            for node in nodes:
+                if node.type == 'BSDF_PRINCIPLED':
+                    principled_bsdf = node
+                    break
+
+            if principled_bsdf is None:
+                log("No Principled BSDF node found in the material.")
+                self.report({'ERROR'}, "No Principled BSDF node found in the material.")
+                return {'CANCELLED'}
+
+            # Link the Image Texture node to the Principled BSDF node's Base Color
+            links.new(tex_image_node.outputs['Color'], principled_bsdf.inputs['Base Color'])
+
+            log("Final image color map applied to the base color of the selected object's material.")
+            self.report({'INFO'}, f"Final image color map applied {random_seed}.")
             return {'FINISHED'}
 
 

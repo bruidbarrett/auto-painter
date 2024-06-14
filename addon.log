@@ -4,383 +4,10 @@ Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/
 Baking color map of 'Suzanne'
 Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
 Starting auto_paint...
-SEED GENERATED IN ADDON IS 85662
+SEED GENERATED IN ADDON IS 35972
 Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '85662']
-SEED IN AUTO_PAINTER.py: 85662
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_85662.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 53756
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '53756']
-SEED IN AUTO_PAINTER.py: 53756
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Error painting color map: 'NoneType' object does not support item assignment
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_53756.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 88852
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '88852']
-SEED IN AUTO_PAINTER.py: 88852
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Error converting black pixels to transparent: 'NoneType' object does not support item assignment
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_88852.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14192
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14192']
-SEED IN AUTO_PAINTER.py: 14192
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Brightness reduced by 20% and final image saved.
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14192.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 31422
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '31422']
-SEED IN AUTO_PAINTER.py: 31422
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Brightness reduced by 20% and final image saved.
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_31422.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 67402
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '67402']
-SEED IN AUTO_PAINTER.py: 67402
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_67402.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 67402
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '67402']
-SEED IN AUTO_PAINTER.py: 67402
-Starting NORMAL MAP painting...
-Found packed image: normals.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Image replaced and repacked successfully.
-Rendering painted normals...
-Painted normal map generated!
-Mask created.
-Clipping mask applied successfully.
-Color correction applied!
-Starting COLOR MAP painting...
-Found packed image: colors.png
-Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Image replaced and repacked successfully.
-Rendering painted color map...
-Painted color map generated!
-Blender auto-painter background process completed successfully!
-Auto paint finished successfully.
-Starting apply_texture_to_normal...
-Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_67402.png
-Final image texture applied to the normal input of the selected object's material.
-Apply final texture finished successfully.
-Executing auto painter...
-Baking normal map of 'Suzanne'
-Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
-Baking color map of 'Suzanne'
-Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
-Starting auto_paint...
-SEED GENERATED IN ADDON IS 14160
-Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '14160']
-SEED IN AUTO_PAINTER.py: 14160
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '35972']
+SEED IN AUTO_PAINTER.py: 35972
 Starting NORMAL MAP painting...
 Found packed image: normals.png
 Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
@@ -401,19 +28,24 @@ Blender auto-painter background process completed successfully!
 Auto paint finished successfully.
 Starting apply_texture_to_normal...
 Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_14160.png
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_35972.png
 Final image texture applied to the normal input of the selected object's material.
 Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_35972.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
 Executing auto painter...
 Baking normal map of 'Suzanne'
 Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
 Baking color map of 'Suzanne'
 Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
 Starting auto_paint...
-SEED GENERATED IN ADDON IS 1028
+SEED GENERATED IN ADDON IS 35972
 Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '1028']
-SEED IN AUTO_PAINTER.py: 1028
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '35972']
+SEED IN AUTO_PAINTER.py: 35972
 Starting NORMAL MAP painting...
 Found packed image: normals.png
 Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
@@ -434,19 +66,24 @@ Blender auto-painter background process completed successfully!
 Auto paint finished successfully.
 Starting apply_texture_to_normal...
 Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_1028.png
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_35972.png
 Final image texture applied to the normal input of the selected object's material.
 Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_35972.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
 Executing auto painter...
 Baking normal map of 'Suzanne'
 Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
 Baking color map of 'Suzanne'
 Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
 Starting auto_paint...
-SEED GENERATED IN ADDON IS 43933
+SEED GENERATED IN ADDON IS 18111
 Starting main function...
-Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '43933']
-SEED IN AUTO_PAINTER.py: 43933
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '18111']
+SEED IN AUTO_PAINTER.py: 18111
 Starting NORMAL MAP painting...
 Found packed image: normals.png
 Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
@@ -467,6 +104,695 @@ Blender auto-painter background process completed successfully!
 Auto paint finished successfully.
 Starting apply_texture_to_normal...
 Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
-Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_43933.png
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_18111.png
 Final image texture applied to the normal input of the selected object's material.
 Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_18111.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 11131
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '11131']
+SEED IN AUTO_PAINTER.py: 11131
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_11131.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_11131.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 17193
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '17193']
+SEED IN AUTO_PAINTER.py: 17193
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_17193.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_17193.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 19884
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '19884']
+SEED IN AUTO_PAINTER.py: 19884
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_19884.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_19884.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Cube'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Cube'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 19884
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '19884']
+SEED IN AUTO_PAINTER.py: 19884
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_19884.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_19884.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 19884
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '19884']
+SEED IN AUTO_PAINTER.py: 19884
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_19884.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_19884.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 19884
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '19884']
+SEED IN AUTO_PAINTER.py: 19884
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_19884.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_19884.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 18434
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '18434']
+SEED IN AUTO_PAINTER.py: 18434
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_18434.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_18434.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 79802
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '79802']
+SEED IN AUTO_PAINTER.py: 79802
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_79802.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_79802.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 32952
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '32952']
+SEED IN AUTO_PAINTER.py: 32952
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_32952.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_32952.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Plane'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Plane'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 32952
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '32952']
+SEED IN AUTO_PAINTER.py: 32952
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_32952.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_32952.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 83623
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '83623']
+SEED IN AUTO_PAINTER.py: 83623
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_83623.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_83623.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 83623
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '83623']
+SEED IN AUTO_PAINTER.py: 83623
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_83623.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_83623.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 83623
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '83623']
+SEED IN AUTO_PAINTER.py: 83623
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_83623.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_83623.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 83623
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '2048', 'samples', '100', 'seed', '83623']
+SEED IN AUTO_PAINTER.py: 83623
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_83623.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_83623.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 74976
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '4096', 'samples', '100', 'seed', '74976']
+SEED IN AUTO_PAINTER.py: 74976
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_74976.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_74976.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 74976
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '4096', 'samples', '100', 'seed', '74976']
+SEED IN AUTO_PAINTER.py: 74976
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_74976.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_74976.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 74976
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '4096', 'samples', '100', 'seed', '74976']
+SEED IN AUTO_PAINTER.py: 74976
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_74976.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_74976.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.
+Executing auto painter...
+Baking normal map of 'Suzanne'
+Normal map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Baking color map of 'Suzanne'
+Color map baked to /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Starting auto_paint...
+SEED GENERATED IN ADDON IS 74976
+Starting main function...
+Command-line arguments received: ['/Applications/Blender.app/Contents/MacOS/Blender', '-b', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/painter.blend', '-P', '/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/auto_painter.py', '--', 'render_resolution', '4096', 'samples', '100', 'seed', '74976']
+SEED IN AUTO_PAINTER.py: 74976
+Starting NORMAL MAP painting...
+Found packed image: normals.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/normals.png
+Image replaced and repacked successfully.
+Rendering painted normals...
+Painted normal map generated!
+Mask created.
+Clipping mask applied successfully.
+Color correction applied!
+Starting COLOR MAP painting...
+Found packed image: colors.png
+Setting image filepath to: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/colors.png
+Image replaced and repacked successfully.
+Rendering painted color map...
+Painted color map generated!
+Hue adjusted and final image saved!
+Blender auto-painter background process completed successfully!
+Auto paint finished successfully.
+Starting apply_texture_to_normal...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_74976.png
+Final image texture applied to the normal input of the selected object's material.
+Apply final texture finished successfully.
+Starting apply_color_map...
+Current blend directory: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter
+Final image path: /Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/final_colors_74976.png
+Final image color map applied to the base color of the selected object's material.
+Apply color map finished successfully.

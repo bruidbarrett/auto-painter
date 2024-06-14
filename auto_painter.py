@@ -21,9 +21,9 @@ def correct_colors_advanced(original_img, modified_img):
     hsv_modified /= [180, 255, 255]
 
     # Define the thresholds for hue, saturation, and value differences
-    hue_threshold = 0.04
-    sat_threshold = 0.12
-    val_threshold = 0.12 
+    hue_threshold = 0.04 # 0.4%
+    sat_threshold = 0.12 # 1.2%
+    val_threshold = 0.12 # 1.2%
 
     # Correction logic
     for i in range(hsv_original.shape[0]):
@@ -125,7 +125,7 @@ def paint_color_map(resolution_arg, samples_arg, seed):
     current_blend_dir = os.path.dirname(bpy.data.filepath)
     blender_file_path = os.path.join(current_blend_dir, 'color_painter.blend')
     image_path = os.path.join(current_blend_dir, 'colors.png')
-    final_path = os.path.join(current_blend_dir, f'final_colors_{seed}.png')
+    pre_path = os.path.join(current_blend_dir, f'pre_colors_{seed}.png')
 
 
     # Convert black pixels to transparent
@@ -168,7 +168,7 @@ def paint_color_map(resolution_arg, samples_arg, seed):
     bpy.context.scene.cycles.samples = samples_arg
 
     # set output path
-    bpy.context.scene.render.filepath = final_path
+    bpy.context.scene.render.filepath = pre_path
     bpy.context.scene.render.image_settings.file_format = 'PNG'
 
     # Render painted colors
@@ -176,8 +176,8 @@ def paint_color_map(resolution_arg, samples_arg, seed):
     bpy.ops.render.render(write_still=True)
     log("Painted color map generated!")
 
-        # Load the final rendered image
-    final_image = cv2.imread(final_path, cv2.IMREAD_UNCHANGED)
+    # Load the final rendered image
+    final_image = cv2.imread(pre_path, cv2.IMREAD_UNCHANGED)
     
     # Check if the image has an alpha channel
     if final_image.shape[2] == 4:
@@ -186,21 +186,19 @@ def paint_color_map(resolution_arg, samples_arg, seed):
     else:
         color_channels = final_image
 
-    # Convert to HSV
+    # color correct hue
     hsv_image = cv2.cvtColor(color_channels, cv2.COLOR_RGB2HSV)
-
-    # Adjust the hue by -5 (ensure no negative values)
-    hsv_image[:, :, 0] = (hsv_image[:, :, 0].astype(int) + 2.5) % 180
-
-    # Convert back to RGB
+    hsv_image[:, :, 0] = (hsv_image[:, :, 0].astype(int) - 2) % 180  # Adjust hue by -0.5
+    # hsv_image[:, :, 1] = np.maximum(hsv_image[:, :, 1] - 10, 0)   # Lower saturation by 4% of 255
+    hsv_image[:, :, 2] = np.clip(hsv_image[:, :, 2] * 1.05, 0, 255) # Increase value by 5%
     adjusted_rgb = cv2.cvtColor(hsv_image, cv2.COLOR_HSV2RGB)
 
+    # Combine with alpha channel if it was present
     if final_image.shape[2] == 4:
-        # Combine with alpha channel if it was present
         adjusted_rgb = np.dstack((adjusted_rgb, alpha_channel))
 
     # Save the adjusted image
-    adjusted_image_path = os.path.join(current_blend_dir, f'adjusted_final_colors_{seed}.png')
+    adjusted_image_path = os.path.join(current_blend_dir, f'final_colors_{seed}.png')
     cv2.imwrite(adjusted_image_path, adjusted_rgb)
 
     log("Hue adjusted and final image saved!")
