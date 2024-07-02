@@ -1,8 +1,6 @@
 import bpy
 import os
-import cv2
 import subprocess
-import numpy as np
 import random
 
 bl_info = {
@@ -43,7 +41,7 @@ def bake_map(obj, filepath, w, map_type='color'):
     tex_image_node.select = True
     nodes.active = tex_image_node
 
-    # Set bake type
+    # set bake type
     if map_type == 'color':
         bpy.context.scene.cycles.bake_type = 'DIFFUSE'
         bpy.context.scene.render.bake.use_pass_direct = False
@@ -73,11 +71,11 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
     def execute(self, context):
         log("Executing auto painter...")
 
-        # set render size and samples count
+        # [0] set render size and samples count
         render_size = 4096
         samples_count = 100
 
-        # bake normal map as normals.png + color map as colors.png
+        # [1] bake normal map as normals.png + color map as colors.png
         obj = bpy.context.active_object
         if obj and obj.type == 'MESH':
             normals_filepath = os.path.join(os.path.dirname(bpy.data.filepath), 'normals.png')
@@ -89,15 +87,15 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
             self.report({'ERROR'}, "No active mesh object selected.")
             return {'CANCELLED'}
         
-        # run auto painter script
+        # [2] run auto painter script
         result = self.auto_paint(render_size, samples_count)
         log("Auto paint finished successfully.")
         
-        # apply texture to normal map
+        # [3] apply texture to normal map
         result = self.apply_texture_to_normal(context)
         log("Apply final texture finished successfully.")
 
-        # appy color to color map
+        # [4] appy color to color map
         result = self.apply_color_map(context)
         log("Apply color map finished successfully.")
 
@@ -106,10 +104,10 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
     def auto_paint(self, render_size, samples_count):
             log("Starting auto_paint...")
 
-            # Generate a random seed
+            # [0] generate a random seed
             log(f"SEED GENERATED IN ADDON IS {random_seed}")
 
-            # determine the directory of the currently opened Blender file
+            # [1] determine the directory of the currently opened Blender file
             current_blend_dir = os.path.dirname(bpy.data.filepath)
 
             blender_executable = bpy.app.binary_path
@@ -126,22 +124,18 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Operation script not found: {operation_script_path}")
                 return {'CANCELLED'}
 
-            # construct the command to run Blender in background mode with the seed argument
+            # [2] run Blender from cli
             command = [
                 blender_executable,
                 "-b", blender_file_path,
                 "-P", operation_script_path,
-                "--",  # This separates Blender's arguments from script arguments
+                "--", 
                 "render_resolution", str(render_size),
                 "samples", str(samples_count),
-                "seed", str(random_seed)  # Passing seed as an argument
+                "seed", str(random_seed) 
             ]
 
-
-            # Run the command
             result = subprocess.run(command, capture_output=True, text=True)
-            # log(f"stdout: {result.stdout}")
-            # log(f"stderr: {result.stderr}")
 
             if result.returncode != 0:
                 log(f"Blender background process failed: {result.stderr}")
@@ -155,7 +149,6 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
     def apply_texture_to_normal(self, context):
             log("Starting apply_texture_to_normal...")
 
-            # Determine the directory of the currently opened Blender file
             current_blend_dir = os.path.dirname(bpy.data.filepath)
             
             final_image_filename = f'final_{random_seed}.png'  # Use the seed in the file name
@@ -169,7 +162,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Final image not found: {final_image_path}")
                 return {'CANCELLED'}
 
-            # Load the final.png image
+            # [0] load final.png image
             try:
                 final_image = bpy.data.images.load(final_image_path, check_existing=False)
                 final_image.reload()
@@ -178,7 +171,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Failed to load {final_image_filename}: {e}")
                 return {'CANCELLED'}
 
-            # Get the active object
+            # [1] get active object in scene
             obj = bpy.context.active_object
 
             if obj is None:
@@ -191,7 +184,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "Active object is not a mesh.")
                 return {'CANCELLED'}
 
-            # Get the active material
+            # [2] get active material
             mat = obj.active_material
 
             if mat is None:
@@ -199,18 +192,18 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "Active object has no material.")
                 return {'CANCELLED'}
 
-            # Use nodes
+            # [3] use nodes
             mat.use_nodes = True
             nodes = mat.node_tree.nodes
             links = mat.node_tree.links
 
-            # Create an Image Texture node
+            # [4] create an Image Texture node
             tex_image_node = nodes.new(type='ShaderNodeTexImage')
             tex_image_node.image = final_image
             tex_image_node.image.colorspace_settings.name = 'Non-Color'
             tex_image_node.location = (0, 0)
 
-            # Find the Normal Map node or create one
+            # [5] find the Normal Map node or create one
             normal_map_node = None
             for node in nodes:
                 if node.type == 'NORMAL_MAP':
@@ -223,10 +216,10 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
 
             normal_map_node.space = 'OBJECT'
 
-            # Link the Image Texture node to the Normal Map node
+            # [6] link Image Texture node to the Normal Map node
             links.new(tex_image_node.outputs['Color'], normal_map_node.inputs['Color'])
 
-            # Find the Principled BSDF node
+            # [7] find the Principled BSDF node
             principled_bsdf = None
             for node in nodes:
                 if node.type == 'BSDF_PRINCIPLED':
@@ -238,7 +231,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "No Principled BSDF node found in the material.")
                 return {'CANCELLED'}
 
-            # Link the Normal Map node to the Principled BSDF node
+            # [8] link the Normal Map node to the Principled BSDF node
             links.new(normal_map_node.outputs['Normal'], principled_bsdf.inputs['Normal'])
 
             log("Final image texture applied to the normal input of the selected object's material.")
@@ -248,10 +241,10 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
     def apply_color_map(self, context):
             log("Starting apply_color_map...")
 
-            # Determine the directory of the currently opened Blender file
+            # [0] determine the directory of the currently opened Blender file
             current_blend_dir = os.path.dirname(bpy.data.filepath)
             
-            final_image_filename = f'final_colors_{random_seed}.png'  # Use the seed in the file name
+            final_image_filename = f'final_colors_{random_seed}.png'  # use seed in file name
             final_image_path = os.path.join(current_blend_dir, final_image_filename)
 
             log(f"Current blend directory: {current_blend_dir}")
@@ -262,7 +255,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Final image not found: {final_image_path}")
                 return {'CANCELLED'}
 
-            # Load the final.png image
+            # [1] load final.png image
             try:
                 final_image = bpy.data.images.load(final_image_path, check_existing=False)
                 final_image.reload()
@@ -271,7 +264,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, f"Failed to load {final_image_filename}: {e}")
                 return {'CANCELLED'}
 
-            # Get the active object
+            # [2] get active object
             obj = bpy.context.active_object
 
             if obj is None:
@@ -284,7 +277,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "Active object is not a mesh.")
                 return {'CANCELLED'}
 
-            # Get the active material
+            # [3] get active material
             mat = obj.active_material
 
             if mat is None:
@@ -292,17 +285,17 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "Active object has no material.")
                 return {'CANCELLED'}
 
-            # Use nodes
+            # [4] use nodes
             mat.use_nodes = True
             nodes = mat.node_tree.nodes
             links = mat.node_tree.links
 
-            # Create an Image Texture node
+            # [5] create Image Texture node
             tex_image_node = nodes.new(type='ShaderNodeTexImage')
             tex_image_node.image = final_image
             tex_image_node.location = (0, 0)
 
-            # Find the Principled BSDF node
+            # [6] find the Principled BSDF node
             principled_bsdf = None
             for node in nodes:
                 if node.type == 'BSDF_PRINCIPLED':
@@ -314,7 +307,7 @@ class OBJECT_OT_auto_painter(bpy.types.Operator):
                 self.report({'ERROR'}, "No Principled BSDF node found in the material.")
                 return {'CANCELLED'}
 
-            # Link the Image Texture node to the Principled BSDF node's Base Color
+            # [6] link the Image Texture node to the Principled BSDF node's Base Color
             links.new(tex_image_node.outputs['Color'], principled_bsdf.inputs['Base Color'])
 
             log("Final image color map applied to the base color of the selected object's material.")
@@ -353,7 +346,4 @@ def unregister():
     bpy.utils.unregister_class(OBJECT_PT_auto_painter_panel)
 
 if __name__ == "__main__":
-    # clear log file 
-    log_file = "/Users/barrett/Tristan/Projects/Blender/Thesis/auto-painter/addon.log"
-    open(log_file, 'w').close()
     register()

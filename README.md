@@ -1,1 +1,1 @@
-# auto-painter
+# Blender Auto-Painting Plugin
